@@ -304,7 +304,7 @@ if __name__ == '__main__':
 			if diff < epsilon_stop:
 				if old_command != "stop":
 					old_command = "stop"
-					print("FERMATIIIIIIIII")
+					print("STOP!!")
 					p = Process(target=launch_curl,args=('128128', ))
 					p.start()
 					
@@ -318,14 +318,14 @@ if __name__ == '__main__':
 					#print("Arancione Davanti")
 
 					if cos_x > epsilon_rot_enemy:
-						print("Vai a Destra__Verticale__Arancione")
+						# print("Vai a Destra__Verticale__Arancione")
 						if old_command != "right":
 							old_command = "right"
 							p = Process(target=launch_curl,args=('000255', ))
 							p.start()
 							continue
 					elif cos_x < -epsilon_rot_enemy:
-						print("Vai a Sinistra__Verticale__Arancione")
+						# print("Vai a Sinistra__Verticale__Arancione")
 						if old_command != "left":
 							old_command = "left"
 							p = Process(target=launch_curl,args=('255000', ))
@@ -333,14 +333,14 @@ if __name__ == '__main__':
 							continue
 					
 					if cos_y > epsilon_fron:
-						print("Vai a Indietro__Verticale__Arancione")
+						# print("Vai a Indietro__Verticale__Arancione")
 						if old_command != "back":
 							old_command = "back"	
 							p = Process(target=launch_curl,args=('000000', ))
 							p.start()
 							continue
 					elif cos_y < -epsilon_fron:
-						print("Vai a Avanti__Verticale__Arancione")
+						# print("Vai a Avanti__Verticale__Arancione")
 						if old_command != "front":
 							old_command = "front"
 							p = Process(target=launch_curl,args=('255255', ))
@@ -351,14 +351,14 @@ if __name__ == '__main__':
 					if cos_x > epsilon_rot_enemy:
 						if old_command != "left":
 							old_command = "left"
-							print("Vai a Sinistra__Verticale__Arancione")
+							# print("Vai a Sinistra__Verticale__Arancione")
 							p = Process(target=launch_curl,args=('255000', ))
 							p.start()
 							continue
 					elif cos_x < -epsilon_rot_enemy:
 						if old_command != "right":
 							old_command = "right"
-							print("Vai a Destra__Verticale__Arancione")
+							# print("Vai a Destra__Verticale__Arancione")
 							p = Process(target=launch_curl,args=('000255', ))
 							p.start()
 							continue
@@ -368,14 +368,14 @@ if __name__ == '__main__':
 							old_command = "front"
 							p = Process(target=launch_curl,args=('255255', ))
 							p.start()
-							print("Vai a Avanti__Verticale__Arancione")
+							# print("Vai a Avanti__Verticale__Arancione")
 							continue
 					elif cos_y < -epsilon_fron:
 						if old_command != "back":
 							old_command = "back"
 							p = Process(target=launch_curl,args=('000000', ))
 							p.start()
-							print("Vai a Indietro__Verticale__Arancione")
+							# print("Vai a Indietro__Verticale__Arancione")
 							continue
 			else:
 				diff = points["p0"] - points["p1"]
